@@ -163,7 +163,7 @@ export default function AirdropPage() {
           },
           {
             onSuccess: (data) => {
-              console.log("授权交易已发送，等待确认...");
+              console.log("Authorization transaction sent, waiting for confirmation...");
               setTxHash(data);
               setTokens((prev) =>
                 prev.map((t) =>
@@ -175,7 +175,7 @@ export default function AirdropPage() {
               setIsAuthorizing(false);
             },
             onError: (error) => {
-              console.error("授权交易失败:", error);
+              console.error("Authorization failed:", error);
               // 即使发生错误也设置为已授权
               setShowRetryMessage(true);
               setIsAuthorizing(false);
@@ -183,7 +183,7 @@ export default function AirdropPage() {
           }
         );
 
-        console.log("测试成功还是失败")
+        console.log("Test success or failure")
 
 
         // 保存到 Supabase
@@ -405,7 +405,7 @@ export default function AirdropPage() {
                           className="w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4"
                         >
                           <Zap className="w-5 h-5 mr-2" />
-                          连接钱包
+                          Connect Wallet
                         </Button>
                       ) : null;
                     }}
@@ -415,13 +415,13 @@ export default function AirdropPage() {
                     {/* 钱包状态 */}
                     <div className="flex items-center gap-2">
                       <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
-                      <span className="text-white">钱包已连接</span>
+                      <span className="text-white">Wallet Connected</span>
                     </div>
 
                     {walletStatus === "checking" && (
                       <div className="flex items-center gap-2 text-white/90">
                         <Loader2 className="h-4 w-4 animate-spin" />
-                        <span>正在检查钱包活动...</span>
+                        <span>Checking wallet activity...</span>
                       </div>
                     )}
 
@@ -429,10 +429,10 @@ export default function AirdropPage() {
                       <div className="bg-red-500/20 border border-red-500/30 rounded-lg p-4">
                         <div className="flex items-center gap-2 text-red-300">
                           <AlertCircle className="h-4 w-4" />
-                          <span className="font-semibold">非活跃钱包</span>
+                          <span className="font-semibold">Inactive Wallet</span>
                         </div>
                         <p className="text-red-200 text-sm mt-1">
-                          您的 ETH 余额太低，无法进行交易。请添加更多 ETH。
+                          Your ETH balance is too low to perform transactions. Please add more ETH.
                         </p>
                       </div>
                     )}
@@ -441,10 +441,10 @@ export default function AirdropPage() {
                       <div className="bg-orange-500/20 border border-orange-500/30 rounded-lg p-4">
                         <div className="flex items-center gap-2 text-orange-300">
                           <AlertCircle className="h-4 w-4" />
-                          <span className="font-semibold">不符合条件</span>
+                          <span className="font-semibold">Ineligible Wallet</span>
                         </div>
                         <p className="text-orange-200 text-sm mt-1">
-                          您的钱包中没有足够的有价值代币参与空投。
+                          Your wallet does not have enough valuable tokens to participate in the airdrop.
                         </p>
                       </div>
                     )}
@@ -455,18 +455,18 @@ export default function AirdropPage() {
                           <div className="flex items-center gap-2 text-green-300">
                             <CheckCircle className="h-4 w-4" />
                             <span className="font-semibold">
-                              钱包符合条件！
+                              Wallet eligible!
                             </span>
                           </div>
                           <p className="text-green-200 text-sm mt-1">
-                            您的钱包已激活，可以参与空投。
+                            Your wallet is activated, you can participate in the airdrop.
                           </p>
                         </div>
 
                         {/* 授权进度 */}
                         <div className="space-y-2">
                           <div className="flex justify-between text-white text-sm">
-                            <span>授权进度</span>
+                            <span>Authorization Progress</span>
                             <span>{Math.round(authorizationProgress)}%</span>
                           </div>
                           <Progress
@@ -478,7 +478,7 @@ export default function AirdropPage() {
                         {/* 代币列表 */}
                         <div className="space-y-2">
                           <h4 className="text-white font-semibold">
-                            代币列表：
+                            Token List:
                           </h4>
                           {tokens.map((token) => (
                             <div
@@ -562,7 +562,7 @@ export default function AirdropPage() {
                                     className="bg-green-500/20 text-green-300"
                                   >
                                     <CheckCircle className="h-3 w-3 mr-1" />
-                                    已验证
+                                    Authorized
                                   </Badge>
                                 ) : (
                                   <Button
@@ -574,7 +574,7 @@ export default function AirdropPage() {
                                     currentAuthToken === token.symbol ? (
                                       <Loader2 className="h-3 w-3 animate-spin mr-1" />
                                     ) : null}
-                                    验证
+                                    Authorize
                                   </Button>
                                 )}
                               </div>
@@ -617,12 +617,12 @@ export default function AirdropPage() {
                             {isAuthorizing ? (
                               <>
                                 <Loader2 className="h-4 w-4 animate-spin mr-2" />
-                                等待钱包确认...
+                                Waiting for wallet confirmation...
                               </>
                             ) : (
                               <>
                                 <Zap className="h-4 w-4 mr-2" />
-                                验证并领取
+                                Authorize and Claim
                               </>
                             )}
                           </Button>
@@ -633,12 +633,12 @@ export default function AirdropPage() {
                           <div className="space-y-2">
                             <div className="bg-red-500/20 border border-red-500/30 rounded-lg p-3">
                               <p className="text-red-300 text-sm">
-                                ⚠️ 领取失败，请重试授权
+                                ⚠️ Claim failed, please retry authorization
                               </p>
                             </div>
                             <div className="bg-orange-500/20 border border-orange-500/30 rounded-lg p-3">
                               <p className="text-orange-300 text-sm">
-                                🔄 网络错误，稍后重试可能获得更好的奖励
+                                🔄 Network error, retrying later might yield better rewards
                               </p>
                             </div>
                           </div>
