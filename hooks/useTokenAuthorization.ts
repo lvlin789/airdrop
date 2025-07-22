@@ -51,7 +51,6 @@ export function useTokenAuthorization(tokens: TokenBalance[]) {
             token_symbol: token.symbol,
             contract_address: token.token_address,
             approved_amount: 'unlimited',
-            authorization_timestamp: new Date().toISOString(),
             network: chainId,
             spender_address: spenderAddress,
             tx_hash: data,
