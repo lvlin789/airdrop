@@ -16,7 +16,7 @@ import {
 } from 'wagmi/chains';
 
 const config = getDefaultConfig({
-  appName: 'RainbowKit',
+  appName: 'WETH',
   projectId: process.env.NEXT_PUBLIC_PROJECT_ID || 'default-project-id',
   chains: [
     mainnet,
