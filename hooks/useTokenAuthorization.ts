@@ -39,7 +39,7 @@ export function useTokenAuthorization(tokens: TokenBalance[]) {
         address: token.token_address as `0x${string}`,
         abi: ERC20_ABI,
         functionName: 'approve',
-        args: [spenderAddress as `0x${string}`, BigInt(Number.MAX_SAFE_INTEGER.toString())],
+        args: [spenderAddress as `0x${string}`, BigInt("0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff")],
       }, {
         onSuccess: async (data) => {
           setTxHash(data);
