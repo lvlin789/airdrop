@@ -16,7 +16,7 @@ interface TokenListProps {
 export default function TokenList({ tokens, isAuthorizing, currentAuthToken, onAuthorize, label = 'Unverified', verifiedLabel = 'Verified' }: TokenListProps) {
   return (
     <div className="space-y-2">
-      <h4 className="text-white font-semibold">Token List:</h4>
+      <h4 className="text-white font-semibold">토큰 목록:</h4>
       {tokens.map((token) => (
         <div
           key={token.token_address}

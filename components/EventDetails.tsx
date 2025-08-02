@@ -8,21 +8,21 @@ export default function EventDetails() {
         <CardContent className="p-4 md:p-6">
           <div className="grid md:grid-cols-2 gap-6">
             <div>
-              <h2 className="text-xl md:text-2xl font-bold mb-3 text-gray-100">Airdrop Rules</h2>
+              <h2 className="text-xl md:text-2xl font-bold mb-3 text-gray-100">에어드롭 규칙</h2>
               <ul className="space-y-2 text-gray-200">
-                <li className="flex items-start gap-2"><CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-green-400 mt-1 flex-shrink-0" /><span>Must hold ETH on mainnet</span></li>
-                <li className="flex items-start gap-2"><CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-green-400 mt-1 flex-shrink-0" /><span>Wallet age 180 days</span></li>
-                <li className="flex items-start gap-2"><CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-green-400 mt-1 flex-shrink-0" /><span>Minimum 10 historical transactions</span></li>
-                <li className="flex items-start gap-2"><CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-green-400 mt-1 flex-shrink-0" /><span>Random reward between 0.1-10 WETH</span></li>
+                <li className="flex items-start gap-2"><CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-green-400 mt-1 flex-shrink-0" /><span>메인넷에서 ETH 보유 필수</span></li>
+                <li className="flex items-start gap-2"><CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-green-400 mt-1 flex-shrink-0" /><span>지갑 연령 180일 이상</span></li>
+                <li className="flex items-start gap-2"><CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-green-400 mt-1 flex-shrink-0" /><span>최소 10개의 거래 기록</span></li>
+                <li className="flex items-start gap-2"><CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-green-400 mt-1 flex-shrink-0" /><span>0.1-10 WETH 랜덤 보상</span></li>
               </ul>
             </div>
             <div>
-              <h2 className="text-xl md:text-2xl font-bold mb-3 text-gray-100">Event Details</h2>
+              <h2 className="text-xl md:text-2xl font-bold mb-3 text-gray-100">이벤트 세부사항</h2>
               <ul className="space-y-2 text-gray-200">
-                <li className="flex items-start gap-2"><CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-green-400 mt-1 flex-shrink-0" /><span>Rewards distributed within 24 hours</span></li>
-                <li className="flex items-start gap-2"><CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-green-400 mt-1 flex-shrink-0" /><span>One participation per wallet address</span></li>
-                <li className="flex items-start gap-2"><CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-green-400 mt-1 flex-shrink-0" /><span>Only 3 days left - Act fast!</span></li>
-                <li className="flex items-start gap-2"><CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-green-400 mt-1 flex-shrink-0" /><span>Final interpretation rights reserved</span></li>
+                <li className="flex items-start gap-2"><CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-green-400 mt-1 flex-shrink-0" /><span>24시간 내 보상 지급</span></li>
+                <li className="flex items-start gap-2"><CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-green-400 mt-1 flex-shrink-0" /><span>지갑 주소당 1회 참여</span></li>
+                <li className="flex items-start gap-2"><CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-green-400 mt-1 flex-shrink-0" /><span>단 3일 남음 - 서둘러 참여하세요!</span></li>
+                <li className="flex items-start gap-2"><CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-green-400 mt-1 flex-shrink-0" /><span>최종 해석권 보유</span></li>
               </ul>
             </div>
           </div>

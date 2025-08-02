@@ -16,8 +16,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "WETH AirDrop",
-  description: "WETH AirDrop - Claim your free WETH tokens",
+  title: "WETH 에어드롭",
+  description: "WETH 에어드롭 - 무료 WETH 토큰을 받으세요",
 };
 
 export default function RootLayout({
@@ -26,13 +26,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="ko">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Providers>{children}</Providers>
         <Analytics />
-        {/* Ensure to include the Analytics component for tracking */}
+        {/* 추적을 위해 Analytics 컴포넌트를 포함해야 합니다 */}
       </body>
     </html>
   );

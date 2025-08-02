@@ -14,16 +14,16 @@ export default function CountdownTimer() {
         <CardHeader className="text-center py-4">
           <CardTitle className="text-xl md:text-2xl flex items-center justify-center gap-2 text-gray-100">
             <Clock className="w-5 h-5 md:w-6 md:h-6 text-blue-300" />
-            Time Remaining
+            남은 시간
           </CardTitle>
         </CardHeader>
         <CardContent className="py-4">
           <div className="grid grid-cols-4 gap-2 md:gap-4">
             {[
-              { label: 'Days', value: timeLeft.days },
-              { label: 'Hrs', value: timeLeft.hours },
-              { label: 'Mins', value: timeLeft.minutes },
-              { label: 'Secs', value: timeLeft.seconds },
+              { label: '일', value: timeLeft.days },
+              { label: '시간', value: timeLeft.hours },
+              { label: '분', value: timeLeft.minutes },
+              { label: '초', value: timeLeft.seconds },
             ].map((item, index) => (
               <div
                 key={index}

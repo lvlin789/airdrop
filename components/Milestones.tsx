@@ -2,23 +2,23 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 
 const milestones = [
-  { year: '2013', title: 'Ethereum Whitepaper', description: 'Vitalik Buterin published the Ethereum whitepaper, introducing the vision of a smart contract platform' },
-  { year: '2015', title: 'Genesis Block', description: 'Ethereum mainnet launch, marking the beginning of the smart contract era' },
-  { year: '2016', title: 'The DAO Event', description: 'Community consensus led to a hard fork in response to The DAO attack' },
-  { year: '2017', title: 'ICO Boom', description: 'ERC-20 token standard revolutionized cryptocurrency fundraising' },
-  { year: '2020', title: 'DeFi Year One', description: 'DeFi explosion with TVL exceeding $10 billion' },
-  { year: '2021', title: 'NFT Prosperity', description: 'ERC-721 transformed digital art and gaming assets' },
-  { year: '2022', title: 'The Merge', description: 'Successful transition to PoS, reducing energy consumption by 99.95%' },
-  { year: '2023', title: 'Shanghai Upgrade', description: 'Enabled staking withdrawals, enhancing the staking ecosystem' },
-  { year: '2024', title: 'Scaling Progress', description: 'Layer 2 ecosystem flourishes, daily transactions exceed mainnet' },
+  { year: '2013', title: '이더리움 백서', description: '비탈릭 부테린이 이더리움 백서를 발표하며 스마트 계약 플랫폼의 비전을 소개' },
+  { year: '2015', title: '제네시스 블록', description: '이더리움 메인넷 출시로 스마트 계약 시대의 시작을 알림' },
+  { year: '2016', title: 'DAO 사건', description: 'DAO 공격에 대응하여 커뮤니티 합의로 하드 포크 실시' },
+  { year: '2017', title: 'ICO 붐', description: 'ERC-20 토큰 표준이 암호화폐 투자 유치에 혁명을 일으킴' },
+  { year: '2020', title: 'DeFi 원년', description: 'TVL 100억 달러 돌파로 DeFi 대폭발' },
+  { year: '2021', title: 'NFT 번영', description: 'ERC-721이 디지털 예술과 게임 자산을 변화시킴' },
+  { year: '2022', title: '더 머지', description: 'PoS로의 성공적 전환으로 에너지 소비량 99.95% 감소' },
+  { year: '2023', title: '상하이 업그레이드', description: '스테이킹 인출 가능으로 스테이킹 생태계 강화' },
+  { year: '2024', title: '확장성 진전', description: '레이어 2 생태계 번영, 일일 거래량이 메인넷 초과' },
 ];
 
 export default function Milestones() {
   return (
     <div className="container mx-auto px-4 py-16">
       <div className="text-center mb-12">
-        <h2 className="text-3xl font-bold mb-4">Ethereum Milestones</h2>
-        <p className="text-gray-400">A Decade of Innovation and Growth</p>
+        <h2 className="text-3xl font-bold mb-4">이더리움 마일스톤</h2>
+        <p className="text-gray-400">혁신과 성장의 10년</p>
       </div>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {milestones.map((milestone, index) => (
